@@ -5,7 +5,11 @@ spring:
     name: airmee-zuul-gateway
 zuul:
   routes:
-    user.serviceId: airmeemall-plat #这是调用满足条件的服务名，注意要小写
-    user.path: /user/** #这是所有路径前的通配
+    plat.serviceId: airmeemall-plat #这是调用满足条件的服务名，注意要小写
+    plat.path: /plat/** #这是所有路径前的通配
+    product.serviceId: airmeemall-product
+    product.path: /product/**
+    common.serviceId: airmeemall-common
+    common.path: /common/**
   ignored-services: "*" #用*来通配符，忽略从9527端口通过服务名来调用
   prefix: "/services" #这是所有路径的前缀
